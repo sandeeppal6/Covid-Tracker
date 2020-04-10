@@ -23,11 +23,12 @@ const Countries = ({ handleCountryChange }) => {
         onChange={(evt) => handleCountryChange(evt.target.value)}
       >
         <option value="">World Infected Covid Data</option>
-        {countries.map((country, idx) => (
-          <option key={idx} value={country}>
-            {country}
-          </option>
-        ))}
+        {countries &&
+          countries.map((country, idx) => (
+            <option key={idx} value={country}>
+              {country}
+            </option>
+          ))}
       </NativeSelect>
     </FormControl>
   );
